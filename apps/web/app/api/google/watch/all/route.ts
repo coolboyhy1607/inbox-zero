@@ -8,7 +8,7 @@ import { captureException } from "@/utils/error";
 import { hasAiAccess, hasColdEmailAccess } from "@/utils/premium";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 async function watchAllEmails() {
   const premiums = await prisma.premium.findMany({

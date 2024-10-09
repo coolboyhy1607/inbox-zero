@@ -7,7 +7,7 @@ import { Frequency } from "@prisma/client";
 import { captureException } from "@/utils/error";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 async function sendSummaryAllUpdate() {
   const users = await prisma.user.findMany({
